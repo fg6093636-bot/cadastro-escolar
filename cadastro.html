@@ -2,61 +2,53 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 04 - Cadastro</title>
+    <link rel="stylesheet" href="style_cadastro.css">
 </head>
 <body>
 
-    <h2>Cadastro</h2>
+    <div class="container-principal">
+        <h1>Formulário de Cadastro</h1>
+        
+        <form action="#">
+            
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br>
 
-    <form>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required><br>
 
-        <!-- Nome -->
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome"><br><br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="0"><br>
 
-        <!-- Email -->
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento"><br>
 
-        <!-- Idade -->
-        <label for="idade">Idade:</label><br>
-        <input type="number" id="idade" name="idade"><br><br>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required><br>
 
-        <!-- Data de nascimento -->
-        <label for="data">Data de nascimento:</label><br>
-        <input type="date" id="data" name="data"><br><br>
+            <fieldset>
+                <legend>Seus Hobbies:</legend>
+                <label><input type="checkbox" name="hobby" value="games"> Jogar (Brawl/eFootball)</label><br>
+                <label><input type="checkbox" name="hobby" value="futebol"> Assistir Futebol</label><br>
+                <label><input type="checkbox" name="hobby" value="filmes"> Ver Séries e Filmes</label><br>
+            </fieldset>
 
-        <!-- Senha -->
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha"><br><br>
+            <fieldset>
+                <legend>Turno de Estudo:</legend>
+                <label><input type="radio" name="turno" value="manha"> Manhã</label>
+                <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                <label><input type="radio" name="turno" value="noite"> Noite</label>
+            </fieldset>
 
-        <!-- Hobbies -->
-        <p>Hobbies:</p>
-        <input type="checkbox" id="futebol" name="hobby">
-        <label for="futebol">Futebol</label><br>
+            <div class="botoes">
+                <button type="submit" class="btn-enviar">Enviar Dados</button>
+                <button type="reset" class="btn-limpar">Limpar Tudo</button>
+            </div>
 
-        <input type="checkbox" id="musica" name="hobby">
-        <label for="musica">Música</label><br>
-
-        <input type="checkbox" id="jogos" name="hobby">
-        <label for="jogos">Jogos</label><br><br>
-
-        <!-- Turno -->
-        <p>Turno de estudo:</p>
-        <input type="radio" id="manha" name="turno">
-        <label for="manha">Manhã</label><br>
-
-        <input type="radio" id="tarde" name="turno">
-        <label for="tarde">Tarde</label><br>
-
-        <input type="radio" id="noite" name="turno">
-        <label for="noite">Noite</label><br><br>
-
-        <!-- Botões -->
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
-
-    </form>
+        </form>
+    </div>
 
 </body>
 </html>
